@@ -1,34 +1,60 @@
 import tkinter as tk
 from functionality import create_dropdown_button 
-from functionality import Save_Error_Popup
+import functionality as func
 
 # Initialize the main window
 window = tk.Tk()
 window.title("Jeeb-pad")
 window.attributes("-fullscreen", True)
 window.configure(bg='#1f1f1f')
+window_1_exists = True
 
 project_created = False
 
-
-def new_file():
-    print("New File")
 
 def open_file():
     print("Open File")
 
 def save_file():
     if project_created == False:
-        functionality.Save_Error_Popup
+        func.Save_Error_Popup
+
+
+def new_file_txt():
+    root = tk.Tk()
+    root.title("Jeeb-pad")
+    root.attributes("-fullscreen", True)
+    root.configure(bg='#1f1f1f')
+    window.destroy()
+    
+    window_1_exists = False
+    text_box = tk.Text(root, font=("Montserrat", 15), width=1920, height=1080, bg="#1f1f1f", fg="#ffffff")
+    text_box.place(x=20,y=0)
+    poo_items = {
+        "New": {
+            "Txt file": lambda: new_file_txt(),
+            "Jpb file (jeeb pad file)": lambda: print("Option 2 selected"),
+            "Pdf file": lambda: print("pdf file")
+        },
+        "Open": open_file,
+    
+    
+    }
+    file_button = tk.Button(window, text="File", font=("Arial", 10), borderwidth=0, relief="flat", bg="#1f1f1f", fg="#ffffff")
+    file_button.place(x=0, y=0)
+
+    create_dropdown_button(window, file_button, poo_items)
+    
+
 
 menu_items = {
     "New": {
-        "Txt file": lambda: print("Option 1 selected"),
+        "Txt file": lambda: new_file_txt(),
         "Jpb file (jeeb pad file)": lambda: print("Option 2 selected"),
         "Pdf file": lambda: print("pdf file")
     },
     "Open": open_file,
-    "Save": save_file,
+    
     
 }
 
