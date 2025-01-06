@@ -93,6 +93,7 @@ def new_file_txt():
 file_button = tk.Button(window, text="Create text file", font=("Arial", 10), borderwidth=0, relief="flat", bg="#1f1f1f", fg="#ffffff", command=new_file_txt)
 file_button.place(x=0, y=0)
 
+text_widget = tk.Text(window, font=("Montserrat", 15), width=1920, height=1080, bg="#1f1f1f", fg="#ffffff")
 file_button = tk.Button(window, text="Open text file", font=("Arial", 10), borderwidth=0, relief="flat", bg="#1f1f1f", fg="#ffffff", command=lambda: open_file(text_widget))  
 file_button.place(x=100, y=0)
 
