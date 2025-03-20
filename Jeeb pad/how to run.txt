@@ -1,5 +1,0 @@
-in a terminal run commands
-    pip install pyinstaller
-    pyinstaller oconsole.spec
-    drag JeebPad.ico into dist
-NOTE: if your antivirus flags it then go turn of real time protection, something about it writing and reading files flags it
