@@ -41,6 +41,8 @@ Jeeb pad is a fully open source Microsoft Notepad replacement primarily for Wind
 
 3. **Install dependencies**  
     pip install tkinter
+    pip install pywebview
+
 
 ---
 
@@ -52,11 +54,8 @@ To build, first install PyInstaller:
     pip install pyinstaller
 
 Then build the application:
-    pyinstaller oconsole.spec
+    pyinstaller Main.spec
 
-*(Note: I was trying to hide the console, but it did that. If it doesn't work, try using: python -m pyinstaller oconsole.spec)*
-
-After building, drag `JeebPad.ico` into the generated `dist` directory.
 
 If you plan on running without building, simply execute:
     python Main.py
