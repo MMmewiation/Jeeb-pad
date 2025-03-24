@@ -98,7 +98,7 @@ def process_file(filepath):
     else:
         print(f"Error: {filepath} is not a valid file.")
 
-def Save():
+def Save(text_widget):
     global SavedFile, filepath_prompt, file_path, SavedFile2
     text_content = text_widget.get("1.0", tk.END)
     if SavedFile:
@@ -128,7 +128,7 @@ def save_file(filepath=None):
             SavedFile = True
             print("Saved file:", SavedFile, "Path:", filepath_prompt)
 
-def open_file():
+def open_file(text_widget):
     global file_path, SavedFile2
     file_path = filedialog.askopenfilename(
         title="Select a file",
@@ -188,9 +188,9 @@ text_widget.pack(fill=tk.BOTH, expand=True)
 
 save_button = tk.Button(button_frame, text="Save", font=("Arial", 8), width=6, height=1, padx=5, pady=5,  borderwidth=0, bg="#ffffff", command=lambda: Save(text_widget))
 save_button.pack(side=tk.LEFT, padx=5)
-open_button = tk.Button(button_frame, text="Open", font=("Arial", 8), width=6, height=1, padx=5, pady=5, borderwidth=0, bg="#ffffff", command=open_file)
+open_button = tk.Button(button_frame, text="Open", font=("Arial", 8), width=6, height=1, padx=5, pady=5, borderwidth=0, bg="#ffffff", command=lambda: open_file(text_widget))
 open_button.pack(side=tk.LEFT, padx=5)
-saveas_button = tk.Button(button_frame, text="Save as", font=("Arial", 8), width=6, height=1, padx=5, pady=5,  borderwidth=0, bg="#ffffff", command=lambda: save_file(text_widget, None))
+saveas_button = tk.Button(button_frame, text="Save as", font=("Arial", 8), width=6, height=1, padx=5, pady=5,  borderwidth=0, bg="#ffffff", command=lambda: save_file(filepath=None))
 saveas_button.pack(side=tk.LEFT, padx=5)
 edit_button = tk.Button(button_frame, text="Edit", font=("Arial", 8), width=6, height=1, padx=5, pady=5, borderwidth=0, bg="#ffffff", command=Edit)
 edit_button.pack(side=tk.LEFT, padx=5)
@@ -226,12 +226,12 @@ if __name__ == "__main__":
         print("No file provided via 'Open with'.")
 
 #this is commented out because its not for release
-DevModeOption = input("Enter (1) to delete registry entry: ")
-try:
-    if int(DevModeOption) == 1:
-        delete_registry_entry()
-except ValueError:
-    print("Invalid input. Please enter a number.")
+# DevModeOption = input("Enter (1) to delete registry entry: ")
+# try:
+#     if int(DevModeOption) == 1:
+#         delete_registry_entry()
+# except ValueError:
+#     print("Invalid input. Please enter a number.")
 
 
 
