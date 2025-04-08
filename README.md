@@ -85,5 +85,5 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ## Contact
 
 This is an alternative email, so sorry if it takes a while to respond:
-- **Email:** meowsinengine@example.com
+- **Email:** meowsinengine@gmail.com
 
