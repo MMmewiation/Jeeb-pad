@@ -72,7 +72,7 @@ If you plan on running without building, simply execute:
 
 ## Contributing
 
-To contribute, you can email me.
+To contribute, you can email me (mmmewiation@gmail.com).
 
 ---
 
@@ -85,5 +85,5 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ## Contact
 
 This is an alternative email, so sorry if it takes a while to respond:
-- **Email:** meowsinengine@gmail.com
+- **Email:** mmmewiation@gmail.com
 
