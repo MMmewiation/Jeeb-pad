@@ -70,11 +70,6 @@ If you plan on running without building, simply execute:
 
 ---
 
-## Contributing
-
-To contribute, you can email me (mmmewiation@gmail.com).
-
----
 
 ## License
 
